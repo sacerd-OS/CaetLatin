@@ -2,6 +2,7 @@ package com.sacerdos.caetlatin;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import com.google.gson.*;
+
 public class JSONParser {
     Gson gson;
     String path, json;
