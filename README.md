@@ -5,7 +5,7 @@ This project is only a proof of concept, currently at 4 lemmas (so, the bare min
 
 In time, I might expand the functionality of the dictionary to include parsing for different forms, as well as more terms. 
 
-The dictionary uses [Wiktionary](https://en.wiktionary.org/) as its primary source since it’s the most digestible and accessible Latin dictionary I’ve ever used. It is licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
+The dictionary uses [Wiktionary](https://en.wiktionary.org/) as its primary source since it’s the most digestible and accessible Latin dictionary I’ve ever used which is licensed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
 
 ## How to Use
 In this version, no package (a JAR file, etc.) has been released. This will change in the next release, which should be coming out shortly. If you want, you can still download the source code and compile manually.
