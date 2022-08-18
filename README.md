@@ -13,9 +13,11 @@ In this version, no package (a JAR file, etc.) has been released. This will chan
 The UI is quite simple (as I favor simplicity). Run on the command line, enter the word you wish to find the definition of, hit enter. Press "q" to quit at any time, or close the command line. Your choice.
 
 ## To Do
+In the approximate order I'll finish these tasks.
 - [ ] Add more lemmas (from Horace, etc.)
 - [ ] Release an executable package
 - [ ] Add option to inflect searched lemmas
 - [ ] Add search by inflected forms (ex. "sacerdotis" returns result for "sacerdos")
 - [ ] Handle homonyms by providing multiple definitions
+- [ ] Clean up code & make more efficient
 - [ ] Clean up documentation
