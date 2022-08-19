@@ -27,7 +27,8 @@ class JSONBuilder {
 
         for(int i = 0; i < num; i++){
             Lemma newLem = this.lemmaBuilder();
-            newJSON.add(newLem);
+            if(newLem != null)
+                newJSON.add(newLem);
         }
         String json = gson.toJson(newJSON);
         this.writeJSON(json);
@@ -53,6 +54,14 @@ class JSONBuilder {
 
         System.out.println("Word: ");
         lemma = sc.nextLine().toLowerCase();
+
+        if(jParse.findKey(lemma) != null){
+            System.out.println("WARNING! Lemma already exists. Continue? Y/N");
+            char ans = sc.nextLine().toUpperCase().charAt(0);
+            if(ans == 'N'){
+                return null;
+            }
+        }
 
         System.out.println("How many definitions?");
         numDef = sc.nextInt();
