@@ -16,16 +16,10 @@ public class CaetLatin {
         while(keepGoing){
             System.out.println("\nPlease enter a word to search:");
             String key = sc.nextLine().toLowerCase();
-            key = this.firstWord(key);
             if(!key.equals("q"))
                 jParse.findKey(key);
             else
                 keepGoing = false;
         }
-    }
-
-    private String firstWord(String key){
-        String[] ret = key.split(" ");
-        return ret[0];
     }
 }
