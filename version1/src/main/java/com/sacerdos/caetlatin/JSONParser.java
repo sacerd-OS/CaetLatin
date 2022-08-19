@@ -1,28 +1,33 @@
 package com.sacerdos.caetlatin;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+
 import com.google.gson.*;
+import com.google.gson.reflect.TypeToken;
 
 public class JSONParser {
     Gson gson;
     String json;
     final String path = "version1/src/main/java/com/sacerdos/caetlatin/latin.json";
     boolean found;
-    Lemma[] lemmas;
+    ArrayList<Lemma> lemmas;
 
     JSONParser(){
         json = "";
         gson = new Gson();
-        found = false;
         lemmas = parseJSON();
     }
 
     public void findKey(String key){
+        found = false;
+        
         /*Simple linear search. May optimise in future, but currently not necessary*/
         for(Lemma lemma : lemmas){
             if(lemma.getLemma().equals(key)){
-                System.out.println("\n***\n"+lemma.stringAssembler()+"\n***");
+                System.out.println("\n***\n"+lemma.stringAssembler()+"***");
                 found = true;
+                break;
             }
         }
         if(!found){
@@ -30,7 +35,7 @@ public class JSONParser {
         }
     }
 
-    private Lemma[] parseJSON(){
+    private ArrayList<Lemma> parseJSON(){
         try{
             json = Files.readString(Paths.get(path));
         }
@@ -38,7 +43,7 @@ public class JSONParser {
                 System.out.println("Don't you just hate errors? This one has to do with file reading. Did you delete my JSON file?");
                 System.exit(1);
         }
-        Lemma[] lemmas = gson.fromJson(json, Lemma[].class);
+        ArrayList<Lemma> lemmas = gson.fromJson(json, new TypeToken<ArrayList<Lemma>>() {}.getType());
 
         return lemmas;
     }   

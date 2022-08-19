@@ -15,11 +15,17 @@ public class CaetLatin {
         System.out.println("*** CaetLatin ***\n*** Version 0.1.0 ***\nPress 'q' to quit at any time.");
         while(keepGoing){
             System.out.println("\nPlease enter a word to search:");
-            String key = sc.next().toLowerCase();
+            String key = sc.nextLine().toLowerCase();
+            key = this.firstWord(key);
             if(!key.equals("q"))
-                jParse.parseJSON(key);
+                jParse.findKey(key);
             else
                 keepGoing = false;
         }
+    }
+
+    private String firstWord(String key){
+        String[] ret = key.split(" ");
+        return ret[0];
     }
 }

@@ -1,7 +1,7 @@
 [
         {
             "lemma": "sacerdos",
-            "definition": "1. priest, priestess, cleric",
+            "definition": "1. priest, priestess, cleric\n",
             "partOfSpeech": "noun",
             "gender": "M",
             "genitive": "sacerdotis",
@@ -10,7 +10,7 @@
 
         {
             "lemma":"sacer",
-            "definition": "1. sacred, holy, dedicated (to a divinity), consecrated, hallowed\n2. devoted (to a divinity for sacrifice), fated (to destruction), forfeited,  accursed\n3. divine, celestial\n4. execrable, detestable, horrible, infamous; criminal, impious, wicked, abominable, cursed",
+            "definition": "1. sacred, holy, dedicated (to a divinity), consecrated, hallowed\n2. devoted (to a divinity for sacrifice), fated (to destruction), forfeited,  accursed\n3. divine, celestial\n4. execrable, detestable, horrible, infamous; criminal, impious, wicked, abominable, cursed\n",
             "terminations": "sacra, sacrum",
             "partOfSpeech": "adjective",
             "declension":"1st/2nd"
@@ -18,7 +18,7 @@
 
         {
             "lemma": "sacrifico",
-            "definition": "1. I make or offer a sacrifice; I sacrifice",
+            "definition": "1. I make or offer a sacrifice; I sacrifice\n",
             "partOfSpeech": "verb",
             "secondPP": "sacrificare",
             "thirdPP": "sacrificavi",
@@ -27,7 +27,7 @@
         },
         {
             "lemma": "sacrilige",
-            "definition": "1. sacrilegiously, impiously",
+            "definition": "1. sacrilegiously, impiously\n",
             "partOfSpeech": "adverb"   
         }
     ]
