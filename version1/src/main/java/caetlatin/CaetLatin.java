@@ -17,7 +17,7 @@ public class CaetLatin {
             System.out.println("\nPlease enter a word to search:");
             String key = sc.nextLine().toLowerCase();
             if(!key.equals("q"))
-                jParse.findKey(key);
+                jParse.showKey(key);
             else
                 keepGoing = false;
         }
