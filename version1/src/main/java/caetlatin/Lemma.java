@@ -1,4 +1,4 @@
-package com.sacerdos.caetlatin;
+package caetlatin;
 public class Lemma {
     String lemma, definition, partOfSpeech;
     String genitive, declension, terminations;

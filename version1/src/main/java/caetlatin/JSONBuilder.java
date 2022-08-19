@@ -1,4 +1,4 @@
-package com.sacerdos.caetlatin;
+package caetlatin;
 
 import com.google.gson.*;
 import java.io.File;

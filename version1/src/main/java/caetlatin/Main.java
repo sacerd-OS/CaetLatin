@@ -1,4 +1,4 @@
-package com.sacerdos.caetlatin;
+package caetlatin;
 class Main{
     public static void main(String args[]){
         boolean build = false; // true = enter build mode; false = enter dictionary mode
