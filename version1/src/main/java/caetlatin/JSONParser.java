@@ -19,20 +19,25 @@ public class JSONParser {
         lemmas = parseJSON();
     }
 
-    public void findKey(String key){
-        found = false;
+    public void showKey(String key){
+        Lemma l = this.findKey(key);
 
+        if(l != null){
+            System.out.println("\n***\n"+l.stringAssembler()+"***");
+
+        }
+        else{
+            System.out.println("Item not found.");
+        }
+    }
+    public Lemma findKey(String key){
         /*Simple linear search. May optimise in future, but currently not necessary*/
         for(Lemma lemma : lemmas){
             if(lemma.getLemma().equals(key)){
-                System.out.println("\n***\n"+lemma.stringAssembler()+"***");
-                found = true;
-                break;
+                return lemma;
             }
         }
-        if(!found){
-            System.out.println("\nItem not found.");
-        }
+        return null;
     }
 
     private ArrayList<Lemma> parseJSON(){
