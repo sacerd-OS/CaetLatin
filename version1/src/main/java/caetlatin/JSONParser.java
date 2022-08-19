@@ -9,7 +9,7 @@ import com.google.gson.reflect.TypeToken;
 public class JSONParser {
     Gson gson;
     String json;
-    final String path = "version1/src/main/java/com/sacerdos/caetlatin/latin.json";
+    final String path = "version1/src/main/java/caetlatin/latin.json";
     boolean found;
     ArrayList<Lemma> lemmas;
 
