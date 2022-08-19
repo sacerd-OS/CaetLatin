@@ -1,8 +1,16 @@
 package com.sacerdos.caetlatin;
-//import java.util.Scanner;
 class Main{
     public static void main(String args[]){
-        CaetLatin caet = new CaetLatin();
-        caet.viewer();
+        boolean build = false; // true = enter build mode; false = enter dictionary mode
+
+        if(build){
+            JSONBuilder j = new JSONBuilder();
+            j.buildJSON();
+        }
+
+        else{
+            CaetLatin caet = new CaetLatin();
+            caet.viewer();
+        }
     }
 }

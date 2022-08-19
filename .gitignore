@@ -1,3 +1,4 @@
 /.vscode
-version1/target/classes/com/sacerdos/caetlatin/JSONBuilder.class
-version1/src/main/java/com/sacerdos/caetlatin/JSONBuilder.java
+version1/target/classes/com/sacerdos/caetlatin/latin.json.backup
+version1/src/main/java/com/sacerdos/caetlatin/latin.json.backup
+.gitignore

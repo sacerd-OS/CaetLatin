@@ -21,7 +21,7 @@ public class JSONParser {
 
     public void findKey(String key){
         found = false;
-        
+
         /*Simple linear search. May optimise in future, but currently not necessary*/
         for(Lemma lemma : lemmas){
             if(lemma.getLemma().equals(key)){
@@ -46,5 +46,9 @@ public class JSONParser {
         ArrayList<Lemma> lemmas = gson.fromJson(json, new TypeToken<ArrayList<Lemma>>() {}.getType());
 
         return lemmas;
-    }   
+    }
+    
+    public ArrayList<Lemma> getLemmas(){
+        return lemmas;
+    }
 }
