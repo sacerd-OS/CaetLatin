@@ -1,6 +1,0 @@
-/.vscode
-.gitignore
-version1/src/main/java/caetlatin/latin.json.backup
-version1/target
-version1/target/test-classes
-version1/target/classes
