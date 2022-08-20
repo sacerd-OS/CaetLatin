@@ -11,7 +11,7 @@ class JSONBuilder {
     Gson gson;
     JSONParser jParse;
     ArrayList<Lemma> newJSON;
-    final String path = "version1/src/main/resources/caetlatin/latin.json";
+    final String path = "version1/src/main/resources/latin.json";
 
     JSONBuilder(){
         sc = new Scanner(System.in);
