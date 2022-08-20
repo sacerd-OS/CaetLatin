@@ -19,7 +19,7 @@ class JSONBuilder {
         jParse = new JSONParser();
         newJSON = jParse.getLemmas();
     }
-
+ 
     public void buildJSON(){
         System.out.println("How many lemmas do you wish to add?");
         int num = sc.nextInt();
