@@ -4,11 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.sacerdos.caetlatin</groupId>
+  <groupId>caetlatin</groupId>
   <artifactId>version1</artifactId>
   <version>0.1.0</version>
+  <description>Command line Latin dictionary.</description>
 
-  <name>version1</name>
+  <name>CaetLatin</name>
   <url>http://sacerdos.netlify.app</url>
 
   <properties>
@@ -57,6 +58,13 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+                <manifest>
+                    <mainClass>caetlatin.Main</mainClass>
+                </manifest>
+            </archive>
+        </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -75,6 +83,28 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <executions>
+            <execution>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>caetlatin.Main</mainClass>
+              </manifest>
+            </archive>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+          </configuration>
+        </plugin>        
       </plugins>
     </pluginManagement>
   </build>

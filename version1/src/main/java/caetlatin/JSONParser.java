@@ -1,15 +1,15 @@
 package caetlatin;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Scanner;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
 public class JSONParser {
     Gson gson;
     String json;
-    final String path = "version1/src/main/java/caetlatin/latin.json";
+    InputStream path = getClass().getClassLoader().getResourceAsStream("latin.json");
     boolean found;
     ArrayList<Lemma> lemmas;
 
@@ -42,7 +42,7 @@ public class JSONParser {
 
     private ArrayList<Lemma> parseJSON(){
         try{
-            json = Files.readString(Paths.get(path));
+            json = this.read(path);
         }
         catch(Exception e){
                 System.out.println("Don't you just hate errors? This one has to do with file reading. Did you delete my JSON file?");
@@ -55,5 +55,12 @@ public class JSONParser {
     
     public ArrayList<Lemma> getLemmas(){
         return lemmas;
+    }
+    private String read(InputStream i){
+        Scanner s = new Scanner(i);
+        String r = s.useDelimiter("\\Z").next();
+        s.close();
+
+        return r;
     }
 }
